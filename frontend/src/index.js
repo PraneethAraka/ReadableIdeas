@@ -13,6 +13,9 @@ store.subscribe(() => {
   console.log("store changed", store.getState())
 })
 
+store.dispatch({type: "ADD_POST", voteScore: 1})
+store.dispatch({type: "ADD_COMMENTS", voteScore: 1})
+
 ReactDOM.render(
   <Provider store = {store}>
 		<App />
