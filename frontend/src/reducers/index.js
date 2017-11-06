@@ -14,7 +14,7 @@ function post (state = {}, action) {
 }
 
 function comment (state = {}, action) {
-  if (action.type === "ADD_POST")
+  if (action.type === "ADD_COMMENTS")
       {
       return action.state+action.voteScore;
       }
