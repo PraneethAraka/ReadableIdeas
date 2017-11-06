@@ -17,7 +17,7 @@ export function addPost ({ id, timeStamp, title, body, author, category, voteSco
 
 export function addComments ({ id, parentId, timeStamp, body, author, voteScore, deleted, parentDeleted }) {
   return {
-    type: ADD_POST,
+    type: ADD_COMMENT,
     id,
     parentId,
     timeStamp,
