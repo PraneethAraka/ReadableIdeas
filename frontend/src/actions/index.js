@@ -1,31 +1,16 @@
 export const ADD_POST = 'ADD_POST'
 export const ADD_COMMENTS = 'ADD_COMMENTS'
 
-export function addPost ({ id, timeStamp, title, body, author, category, voteScore, deleted }) {
+export function addPost ({ post }) {
   return {
     type: ADD_POST,
-    id,
-    timeStamp,
-    title,
-    body,
-    author,
-    category,
-    voteScore,
-    deleted
+    post
   }
 }
 
-export function addComments ({ id, parentId, timeStamp, body, author, voteScore, deleted, parentDeleted }) {
+export function addComments ({ comment }) {
   return {
-    type: ADD_COMMENT,
-    id,
-    parentId,
-    timeStamp,
-    body,
-    author,
-    voteScore,
-    deleted,
-    parentDeleted
+    type: ADD_COMMENTS,
+    comment
   }
 }
-
