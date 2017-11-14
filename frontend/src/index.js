@@ -9,9 +9,11 @@ import { Provider } from 'react-redux'
 
 const store = createStore(reducer, 0)
 
-store.subscribe(() => {
-  console.log("store changed", store.getState())
-})
+const post = {
+}
+
+const comment = {
+}
 
 store.dispatch({type: "ADD_POST", post})
 store.dispatch({type: "ADD_COMMENTS", comment})
