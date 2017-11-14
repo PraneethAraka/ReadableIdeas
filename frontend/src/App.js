@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Route} from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -29,12 +30,15 @@ class App extends Component {
           <h2>Welcome to Ideas</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Share your thoughts and enlighten the others.
         </p>
-        <p>
+        <Route exact path = "/" render= {() => (
+      	<p>
           Talking to the backend yields these categories: <br/>
           {this.state.backend}
         </p>
+      )}
+      />
       </div>
     );
   }
