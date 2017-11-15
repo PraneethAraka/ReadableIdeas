@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Route} from 'react-router-dom';
+import appRouters from './routes'
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class App extends Component {
       .then( (res) => { return(res.text()) })
       .then((data) => {
         this.setState({backend:data});
-      });
+    });
   }
 
   render() {
@@ -32,16 +32,10 @@ class App extends Component {
         <p className="App-intro">
           Share your thoughts and enlighten the others.
         </p>
-        <Route exact path = "/" render= {() => (
-      	<p>
-          Talking to the backend yields these categories: <br/>
-          {this.state.backend}
-        </p>
-      )}
-      />
-      </div>
+     </div>
     );
   }
 }
+
 
 export default App;
